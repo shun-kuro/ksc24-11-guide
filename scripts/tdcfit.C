@@ -5,6 +5,8 @@
 
 void tdcfit(TString filename){
 
+  gROOT->SetBatch();
+
   TString filepath_root;
 
   Int_t num_plot = 7;
