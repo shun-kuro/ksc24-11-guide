@@ -19,6 +19,7 @@ void chkhit(TString filename){
   Int_t hit2 = 0;
   Int_t hit3 = 0;
   Int_t hit4 = 0;
+  Int_t event_num = 0;
 	while(std::getline(ifs,str_row)){ // デフォルトは\n区切り
     Int_t hit_num = 0;
     Int_t data_num = 0;
@@ -39,7 +40,9 @@ void chkhit(TString filename){
     }else if(hit_num > 3){
       hit4++;
     }
+    event_num++;
   }
+  cout << "all hits -> " << event_num << endl;
 	cout << "1-hits -> " << hit1 << endl;
 	cout << "2-hits -> " << hit2 << endl;
 	cout << "3-hits -> " << hit3 << endl;
@@ -47,6 +50,7 @@ void chkhit(TString filename){
 
   TString name_text = Form("./analysis/%s_report.txt", filename.Data());
   ofstream reportfile(name_text.Data(), std::ios::trunc); // std::ios::truncで前の内容を消して上書き
+  reportfile << "all hits -> " << event_num << endl;
   reportfile << "1-hits -> " << hit1 << endl;
   reportfile << "2-hits -> " << hit2 << endl;
   reportfile << "3-hits -> " << hit3 << endl;
