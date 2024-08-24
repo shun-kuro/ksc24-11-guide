@@ -45,7 +45,7 @@ void chkhit(TString filename){
 	cout << "3-hits -> " << hit3 << endl;
 	cout << "more hits -> " << hit4 << endl;
 
-  TString name_text = Form("./data/%s_report.txt", filename.Data());
+  TString name_text = Form("./analysis/%s_report.txt", filename.Data());
   ofstream reportfile(name_text.Data(), std::ios::trunc); // std::ios::truncで前の内容を消して上書き
   reportfile << "1-hits -> " << hit1 << endl;
   reportfile << "2-hits -> " << hit2 << endl;
