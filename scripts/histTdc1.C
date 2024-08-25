@@ -25,12 +25,12 @@ void histTdc1(TString filename) {
 
   for(Int_t i = 0; i < 1; i++){
     tdc_c[i] = new TCanvas(Form("%s%d", name_canvas_tdc.Data(), i + 1), "canvas", 800, 600);
-    tdchist[i] = new TH1F(Form("tdchist%d", i + 1), ";TDC Ch;Count",4500, 0, 4500);
+    tdchist[i] = new TH1F(Form("tdchist%d", i + 1), ";TDC Ch;Count",2250, 0, 4500);
   }
 
   for(Int_t i = 0; i < 6; i++){
     adc_c[i] = new TCanvas(Form("%s%d", name_canvas_adc.Data(), i + 1), "canvas", 800, 600);
-    adchist[i] = new TH1F(Form("adchist%d", i + 1), ";ADC Ch;Count",4500, 0, 4500);
+    adchist[i] = new TH1F(Form("adchist%d", i + 1), ";ADC Ch;Count",2250, 0, 4500);
   }
 
   // ヒストグラムの描画
