@@ -2,7 +2,7 @@
 // Usage : .x hitcut.C("Aug24_N2_1400sec")
 // テキストファイルを読んでhitの有無を0と1で出力
 
-#include "ROOTHeaders.h"
+// #include "ROOTHeaders.h"
 
 void hitcut(TString filename){
 
